@@ -2,6 +2,7 @@ import japgolly.scalajs.react.{BackendScope, _}
 import japgolly.scalajs.react.vdom.prefix_<^._
 
 import scala.scalajs.js.JSApp
+import org.scalajs.dom.document
 
 object Main extends JSApp {
   def main(): Unit = {
@@ -39,9 +40,9 @@ object Main extends JSApp {
       .renderBackend[Backend]
       .buildU
 
-//    val mountNode = "body"
-//
-//    ReactDOM.render(TodoApp(), mountNode)
+    val mountNode = document.body
+
+    ReactDOM.render(TodoApp(), mountNode)
 
   }
 }
